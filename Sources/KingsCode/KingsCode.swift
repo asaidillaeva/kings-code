@@ -1,16 +1,16 @@
 import UIKit
 
-extension UIView {
+open extension UIView {
     
     @resultBuilder
-    struct ConstraintsBuilder {
+    open struct ConstraintsBuilder {
         static func buildBlock(_ components: NSLayoutConstraint...) -> [NSLayoutConstraint] {
             components
         }
     }
     
     @discardableResult
-    func createConstraints(@ConstraintsBuilder constraints: (() -> [NSLayoutConstraint])) -> [NSLayoutConstraint] {
+    open func createConstraints(@ConstraintsBuilder constraints: (() -> [NSLayoutConstraint])) -> [NSLayoutConstraint] {
         constraints()
     }
 }
